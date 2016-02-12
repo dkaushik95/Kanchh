@@ -1,0 +1,17 @@
+<div class="jumbotron">
+	<h1><%= @product.name %></h1>
+	<p><%= @product.short_description %></p>
+	<% if @product.default_image %>
+  		<%= image_tag @product.default_image.path, :class => "img-responsive", :alt => "Placeholder image" %>
+	<% end %>
+	<p>
+  		<b><%= number_to_currency @product.price %></b>
+  		<%= link_to "Add to basket", product_path(@product.permalink), :method => :post, :class => 'btn btn-primary btn-lg', :role => 'button' %>
+	</p>
+	<hr>
+		<%= simple_format @product.description %>
+	<hr>
+	<p>
+		<%= link_to "Back to list", :controller => 'products', :action => 'index' , :class => 'btn btn-default btn-lg' %>
+	</p>
+</div>

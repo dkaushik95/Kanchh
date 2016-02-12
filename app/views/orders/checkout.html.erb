@@ -1,0 +1,42 @@
+<h2>Checkout</h2>
+<%= render 'items', :order => @order %>
+
+
+
+
+<%= form_for @order, :url => checkout_path do |f| %>
+    <div>
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon"><%= f.label :first_name, 'Name' %></span>
+            <%= f.text_field :first_name, :class => 'form-control', :placeholder => 'First' %> 
+            <%= f.text_field :last_name, :class => 'form-control', :placeholder => 'Last' %>
+        </div>
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon"><%= f.label :billing_address1, 'Address' %></span>
+            <%= f.text_field :billing_address1, :class => 'form-control', :placeholder => 'Line 1' %> 
+            <%= f.text_field :billing_address2, :class => 'form-control', :placeholder => 'Line 2' %>
+            <%= f.text_field :billing_address3, :class => 'form-control', :placeholder => 'Line 3' %>
+            <%= f.text_field :billing_address4, :class => 'form-control', :placeholder => 'Line 4' %>
+        </div>
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon"><%= f.label :billing_postcode, 'Post code' %></span>
+            <%= f.text_field :billing_postcode, :class => 'form-control', :placeholder => 'ZIP Code' %> 
+        </div>
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon">Country</span>
+            <%= f.collection_select :billing_country_id, Shoppe::Country.ordered, :id, :name, :class =>'form-control', :include_blank => true %>
+            
+        </div>
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon">@</span>
+            <%= f.text_field :email_address, :class => 'form-control', :placeholder => 'Email Address' %> 
+        </div>
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon"><%= f.label :phone_number %></span>
+            <%= f.text_field :phone_number, :class => 'form-control', :placeholder => 'Email Address' %> 
+        </div>
+        <br>
+        <%= f.submit 'Continue', :class => 'btn btn-primary' %>
+    </div>
+
+<% end %>

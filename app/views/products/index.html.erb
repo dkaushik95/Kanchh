@@ -1,0 +1,28 @@
+<div class="jumbotron">
+      <h1>Hello there :)</h1>
+      <p>Hope you like the products you see. Enjoy shopping. </p>
+      <p>
+        
+        <%= link_to 'Learn about us', :controller => 'page', :action => 'about', :class => 'btn btn-primary btn-lg', :role => 'button' %>
+      </p>
+</div>
+
+<% @products.each do |category, products| %>
+  <div class="row">
+    <h3><%= category.name %></h3>
+    <% products.each do |product| %>
+      <div class="col-md-4">
+        <div class="thumbnail">
+          <%= image_tag product.default_image.path, :alt => 'Image of the product' %>
+          <div class="caption">
+            <h3><%= link_to product.name, product_path(product.permalink) %></h3>
+            <p><%= product.short_description %></p>
+            <p>
+              <%= link_to number_to_currency(product.price), product_path(product.permalink), :class => 'btn btn-primary' %>
+            </p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% end %>

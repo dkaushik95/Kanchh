@@ -1,0 +1,13 @@
+<h2>Make your payment</h2>
+<%= form_tag do %>
+  <dl>
+    <dt class="input-group-addon"><%= label_tag 'card_number' %></dt>
+    <dd ><%= text_field_tag 'card_number' %></dd>
+    <dt class="input-group-addon"><%= label_tag 'expiry' %></dt>
+    <dd><%= text_field_tag 'expiry' %></dd>
+    <dt class="input-group-addon"><%= label_tag 'security_code' %></dt>
+    <dd><%= text_field_tag 'security_code' %></dd>
+    <dd ><%= submit_tag "Continue", :class => 'btn btn-primary' %></dd>
+  </dl>
+<% end %>
+<div>
