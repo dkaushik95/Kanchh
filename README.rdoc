@@ -1,28 +1,13 @@
-== README
+== Kaanch
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a Ruby on Rails example on how you can make a webstore. 
 
-Things you may want to cover:
+The idea of this particular app:
 
-* Ruby version
+* A webstore where people can buy designer clothes
 
-* System dependencies
+* Designers can sign up and upload their design and get to work when there is an order
 
-* Configuration
+* Designers can also write their own blog which shows their artistic skills to customers.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* We provide a platform to connect designers and customers.
