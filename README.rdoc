@@ -11,3 +11,8 @@ The idea of this particular app:
 * Designers can also write their own blog which shows their artistic skills to customers.
 
 * We provide a platform to connect designers and customers.
+
+=== Highlights
+
+* A few students from the NMIMS University had a start up idea to bring the designers and consumers together to derive customized clothing line. 
+* I created a webstore for them till the billing module. 
